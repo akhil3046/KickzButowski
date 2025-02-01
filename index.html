@@ -173,37 +173,39 @@
     </a>
 
     <script>
+        
         // Create sticker background
-        function createStickers() {
-            const types = ['sneaker', 'hoodie', 'tshirt'];
-            const container = document.getElementById('stickerContainer');
-            
-            // Add sticker images (encoded as base64)
-           const stickerImages = [
-            'youtube.png',
-            'denim-shorts.png',
-            'jeans.png',
-            't-shirt1.png',
-            'hoody1.png',
-            'nike.png',
-            'sneakers1.png',
-            'sneakers2.png'
-        ];
+function createStickers() {
+    const types = ['sneaker', 'hoodie', 'tshirt'];
+    const container = document.getElementById('stickerContainer');
+    
+    // Add sticker images (encoded as base64)
+    const stickerImages = [
+        'youtube.png',
+        'denim-shorts.png',
+        'jeans.png',
+        't-shirt1.png',
+        'hoody1.png',
+        'nike.png',
+        'sneakers1.png',
+        'sneakers2.png'
+    ];
 
-            for(let i = 0; i < 40; i++) {
-                const sticker = document.createElement('img');
-                sticker.className = 'sticker';
-                sticker.src = stickers[types[Math.floor(Math.random() * types.length)]];
-                Object.assign(sticker.style, {
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    width: `${Math.random() * 80 + 40}px`,
-                    transform: `rotate(${Math.random() * 360}deg)`,
-                    animationDelay: `${Math.random() * 6}s`
-                });
-                container.appendChild(sticker);
-            }
-        }
+    for(let i = 0; i < 40; i++) {
+        const sticker = document.createElement('img');
+        sticker.className = 'sticker';
+        // Fix this line - use stickerImages array
+        sticker.src = stickerImages[Math.floor(Math.random() * stickerImages.length)];
+        Object.assign(sticker.style, {
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            width: `${Math.random() * 80 + 40}px`,
+            transform: `rotate(${Math.random() * 360}deg)`,
+            animationDelay: `${Math.random() * 6}s`
+        });
+        container.appendChild(sticker);
+    }
+}
 
         // Initial setup
         window.addEventListener('load', () => {
