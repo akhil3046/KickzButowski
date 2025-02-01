@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KickzButowski Subscribers</title>
+    <title>Subscribers Wall</title>
     <style>
         * {
             margin: 0;
@@ -179,11 +179,16 @@
             const container = document.getElementById('stickerContainer');
             
             // Add sticker images (encoded as base64)
-            const stickers = {
-                sneaker: 'data:image/png;base64,iVBORw0KGgo...',
-                hoodie: 'data:image/png;base64,iVBORw0KGgo...',
-                tshirt: 'data:image/png;base64,iVBORw0KGgo...'
-            };
+           const stickerImages = [
+            'youtube.png',
+            'denim-shorts.png',
+            'jeans.png',
+            't-shirt1.png',
+            'hoody1.png',
+            'nike.png',
+            'sneakers1.png',
+            'sneakers2.png'
+        ];
 
             for(let i = 0; i < 40; i++) {
                 const sticker = document.createElement('img');
